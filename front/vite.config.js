@@ -34,7 +34,7 @@ module.exports = {
       '@live-change/vue-api',
       '@live-change/dao',
       '@live-change/dao-sockjs',
-     '@live-change/dao-websocket',
+      '@live-change/dao-websocket',
     ]
   },
 

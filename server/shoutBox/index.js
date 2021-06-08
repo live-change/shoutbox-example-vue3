@@ -1,8 +1,7 @@
 const App = require("@live-change/framework")
 const app = App.app()
 const service = app.createServiceDefinition({
-  name: "shoutBox",
-  validators: require('../../validators.js')
+  name: "shoutBox"
 })
 
 const Message = service.model({

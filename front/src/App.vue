@@ -1,14 +1,22 @@
-<template>
-  <div>
+<template>  
+  <nav>
     <router-link to="/">Shoutbox</router-link>
+  </nav>
+  <main>
     <router-view v-slot="{ Component }">
       <loading-zone>
+        <template v-slot:loading>
+          <div class="loading">Loading! Please wait!</div>
+        </template>
         <working-zone>
+          <template v-slot:working>
+            <div class="loading">Working! Please wait!</div>
+          </template>
           <component :is="Component" />
         </working-zone>
       </loading-zone>
-    </router-view>
-  </div>
+    </router-view>  
+  </main>
 </template>
 
 <script>
@@ -48,12 +56,31 @@ export default {
 </script>
 
 <style>
-#app {
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;  
+  text-align: left;
+  color: #2c3e50;  
+}
+nav {
+  border-bottom: 1px solid gray;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.loading, .working {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

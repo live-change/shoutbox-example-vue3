@@ -1,7 +1,7 @@
 import { createSSRApp } from 'vue'
 import { createMetaManager } from 'vue-meta'
 
-import { registerComponents, validators } from '@live-change/vue3-components'
+import { registerComponents } from '@live-change/vue3-components'
 import ReactiveDaoVue from '@live-change/dao-vue3'
 
 import App from './App.vue'
@@ -16,7 +16,7 @@ export function createApp(api) {
   app.config.devtools = true
 
   api.installInstanceProperties(app.config.globalProperties)
-  app.config.globalProperties.$validators = validators
+
   registerComponents(app) 
   app.use(ReactiveDaoVue, { dao: api })
   
