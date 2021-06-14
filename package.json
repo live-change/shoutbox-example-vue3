@@ -1,10 +1,10 @@
 {
-  "name": "shoutbox-example-e2e",
+  "name": "shoutbox-example",
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "memDev": "../cli/bin/lcli.js ssrDev --ssrRoot front --withApi --withServices --updateServices --services server/services.config.js --withDb --dbBackend mem --createDb",
-    "dev": "../cli/bin/lcli.js ssrDev --ssrRoot front --withApi --withServices --updateServices --services server/services.config.js",
+    "memDev": "lcli ssrDev --ssrRoot front --withApi --withServices --updateServices --services server/services.config.js --withDb --dbBackend mem --createDb",
+    "dev": "lcli ssrDev --ssrRoot front --withApi --withServices --updateServices --services server/services.config.js",
     "ssrDev": "lcli ssrDev",
     "serveAll": "cross-env NODE_ENV=production lcli ssrServer --ssrRoot front --withApi --withServices --updateServices --services server/services.config.js",
     "serve": "cross-env NODE_ENV=production lcli ssrServer --ssrRoot front",
@@ -35,7 +35,7 @@
     "vite": "^2.3.0",
     "vue": "^3.0.8",
     "vue-meta": "^3.0.0-alpha.3",
-    "vue-router": "^4.0.3"
+    "vue-router": "4.0.3"
   },
   "devDependencies": {
     "@wdio/selenium-standalone-service": "^7.7.0",
