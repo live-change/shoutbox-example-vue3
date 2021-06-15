@@ -29,7 +29,10 @@ module.exports = {
       'vite'
     ],
     noExternal: [
-      'vue-meta'
+      'vue-meta',
+      '@live-change/vue3-components',
+      '@live-change/dao-vue3',
+      '@live-change/vue3-ssr'
     ]
   },
   optimizeDeps: {
