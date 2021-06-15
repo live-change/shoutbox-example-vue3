@@ -22,9 +22,12 @@ module.exports = {
   },
   ssr: {
     external: [
-      '@live-change/dao', //path.resolve('../../dao'),
-      '@live-change/vue-api', //path.resolve('../../vue-api'),
-      'debug', '@vue/server-renderer', 'vite'],
+      '@live-change/dao',
+      '@live-change/vue-api',
+      'debug',
+      '@vue/server-renderer',
+      'vite'
+    ],
     noExternal: [
       'vue-meta'
     ]
@@ -35,6 +38,7 @@ module.exports = {
       '@live-change/dao',
       '@live-change/dao-sockjs',
       '@live-change/dao-websocket',
+      'debug'
     ]
   },
 
